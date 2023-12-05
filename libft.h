@@ -29,6 +29,7 @@ typedef struct s_list
 //			MEM
 
 void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_realloc(void *ptr, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
