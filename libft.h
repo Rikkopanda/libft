@@ -61,7 +61,7 @@ char	*strnstr(const char *big,	const char *little, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strnstr(const char *big,	const char *little, size_t len);
-
+int		ft_utoa_1000(unsigned int num, char str[1000]);
 //			FD Functions
 
 void	ft_putchar_fd(char c, int fd);
