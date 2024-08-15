@@ -1,17 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_uint_atoi_base.c                                :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rverhoev <rverhoev@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 10:43:00 by rverhoev          #+#    #+#             */
-/*   Updated: 2023/11/29 15:46:55 by rverhoev         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_uint_atoi_base.c                                :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rverhoev <rverhoev@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/07/21 10:43:00 by rverhoev      #+#    #+#                 */
+/*   Updated: 2024/08/15 15:04:06 by rverhoev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include <unistd.h>
-// #include <stdio.h>
 
 int	start_initial_substring(char *str, char *base, int passeer)
 {
@@ -79,8 +76,8 @@ static int	ft_atoi2(char *str, char *base, int *min)
 
 unsigned int	base_substr_to_int(char *base, char *str, int i, int base_len)
 {
-	int	j;
-	int	str_len;
+	int				j;
+	int				str_len;
 	unsigned int	dec_nbr;
 
 	dec_nbr = 0;
@@ -129,8 +126,6 @@ static int	check_args(char *base, int len)
 	return (0);
 }
 
-#include <stdio.h>
-
 unsigned int	ft_uint_atoi_base(char *str, char *base)
 {
 	int				base_len;
@@ -148,10 +143,7 @@ unsigned int	ft_uint_atoi_base(char *str, char *base)
 	if (i == -1)
 		return (0);
 	dec_nbr = base_substr_to_int(base, str, i, base_len);
-	printf("%u", dec_nbr);
-	//if (((min % 2) == 0) || (min == 0))
-		return (dec_nbr);
-	//return (-dec_nbr);
+	return (dec_nbr);
 }
 //ft_atoi changes i to start, 
 //gives str after start(i) terminator at end if hits non-base
